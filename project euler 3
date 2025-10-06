@@ -1,0 +1,25 @@
+n = 600851475143
+largest = None
+
+# remove factors of 2
+while n % 2 == 0:
+    largest = 2
+    n //= 2
+
+# test odd divisors
+d = 3
+import math
+limit = math.isqrt(n) + 1
+while d <= limit and n > 1:
+    if n % d == 0:
+        largest = d
+        while n % d == 0:
+            n //= d
+        limit = math.isqrt(n) + 1
+    d += 2
+
+# if remainder is >1 it's prime and the largest
+if n > 1:
+    largest = n
+
+print(largest)  # 6857
