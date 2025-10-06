@@ -1,0 +1,3 @@
+n = 100
+diff = (sum(range(1,n+1))**2) - sum(i*i for i in range(1,n+1))
+print(diff)  # 25164150
