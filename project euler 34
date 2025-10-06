@@ -1,0 +1,12 @@
+import math
+
+total = 0
+
+for n in range(10, 50000):
+    s = 0
+    for d in str(n):
+        s += math.factorial(int(d))
+    if s == n:
+        total += n
+
+print(total)
